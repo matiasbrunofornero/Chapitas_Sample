@@ -8,13 +8,14 @@ class Pedido
     private $cliente;
     private $petshop;
 
-    public function __construct($tamano='', $nombre='', $telefono='', $cliente='', $petshop='')
+    public function __construct($tamano='', $nombre='', $telefono='', $cliente='', $petshop='', $numero='')
     {
         $this->setTamano($tamano);
         $this->setNombre($nombre);
         $this->setTelefono($telefono);
         $this->setCliente($cliente);
         $this->setPetshop($petshop);
+        $this->setNumero($numero);
     }
 
     #region Getters
@@ -42,6 +43,11 @@ class Pedido
     {
         return $this->petshop;
     }
+
+    public function getNumero()
+    {
+        return $this->numero;
+    }
     #endregion
 
     #region Setters
@@ -68,6 +74,11 @@ class Pedido
     public function setPetshop($petshop)
     {
         $this->petshop = $petshop;
+    }
+
+    public function setNumero($numero)
+    {
+        $this->numero = $numero;
     }
     #endregion
 
