@@ -7,11 +7,9 @@
 	require_once "Config/Autoload.php";
 	require_once "Config/Config.php";
 	
-	
 	use Config\Autoload as Autoload;
 	use Config\Request as Request;
 	use Config\Router as Router;
-	
 	
 	Autoload::Start();
 	session_start();
