@@ -9,10 +9,13 @@ class pedidoControlador
 
     public function __construct()
 	{
-		$this->pedidoDAO = PedidoDAO::getInstance();
+        $this->pedidoDAO = PedidoDAO::getInstance();
+        // $this->clienteDAO = ClienteDAO::getInstance();
     }
     
-    public function altaPedido(){
+    public function altaPedido()
+    {
+        require_once ROOT."Vistas/AltaPedido.php";
     }
 
     public function ingresarPedido(){

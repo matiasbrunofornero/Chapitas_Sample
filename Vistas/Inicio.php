@@ -6,7 +6,7 @@
 	            <div id="inicio">
 
 	                <input type="submit" value="CARGAR PEDIDO" 
-					style="width: 230px" onclick="location='cliente/altaCliente'">
+					style="width: 230px" onclick="location='pedido/altaPedido'">
 					<br><br>
 
 					<input type="submit" value="LISTAR PEDIDOS" 
@@ -16,7 +16,7 @@
 					<input type="submit" value="BORRAR PEDIDO" 
 					style="width: 230px" onclick="location=''">
 					<br>
-					
+
 	            </div>
 	        </div>
 	    </div>
