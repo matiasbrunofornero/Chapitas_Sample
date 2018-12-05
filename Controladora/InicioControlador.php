@@ -4,8 +4,7 @@ class InicioControlador {
 
         public function index() 
         {
-                include_once ROOT . 'Vistas/Template.php';
-        		include_once ROOT .	'Vistas/Inicio.php';
+                include_once ROOT . 'Vistas/Inicio.php';
         }
 
 }
