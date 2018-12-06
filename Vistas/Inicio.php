@@ -1,6 +1,6 @@
 
 
-	<div class="container">
+	<div class="container" style="padding: 150px">
 	    <div class="row">
 	        <div>
 	            <div id="inicio">
@@ -10,7 +10,7 @@
 					<br><br>
 
 					<input type="submit" value="LISTAR PEDIDOS" 
-					style="width: 230px" onclick="location=''">
+					style="width: 230px" onclick="location='cliente/mostrarClientes'">
 					<br><br>
 
 					<input type="submit" value="BORRAR PEDIDO" 

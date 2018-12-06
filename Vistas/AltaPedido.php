@@ -1,6 +1,15 @@
 <?php namespace Vistas; ?>
 
-<div class="container">
-<input type="submit" value="asdasdasdasdasdasd" 
-style="width: 230px" onclick="location='pedido/AltaPedido'">
-</div>
+	<div class="container" style="padding: 150px">
+	    <div class="row">
+	        <div>
+	            <div id="inicio">
+
+	                <input type="submit" value="FINALIZAR CARGA" 
+					style="width: 230px" onclick="location=''">
+					<br><br>
+
+	            </div>
+	        </div>
+	    </div>
+	</div>

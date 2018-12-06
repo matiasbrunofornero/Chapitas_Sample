@@ -10,7 +10,6 @@ class pedidoControlador
     public function __construct()
 	{
         $this->pedidoDAO = PedidoDAO::getInstance();
-        // $this->clienteDAO = ClienteDAO::getInstance();
     }
     
     public function altaPedido()
