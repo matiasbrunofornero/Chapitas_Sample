@@ -4,7 +4,7 @@
 	    <div class="row">
 	        <div>
                 <h1> Alta Pedido </h1>
-                <form role= "form" method="POST" action="<?php echo DIR . 'pedido/ingresarPedido'?>">
+                <form role= "form" method="POST" action="<?php 'pedido/ingresarPedido'?>">
 	                <div class= "row">
                         <div class= "form-group">
                             <label>Tamano</label>
@@ -42,9 +42,8 @@
                         </div>
                     </div>
                 </form>
-
 				<div style="margin-top: 10px">
-					<a href="<?php echo DIR .'Inicio'?>">VOLVER A INICIO</a>
+					<a href=" <?php echo DIR .'Inicio' ?>">VOLVER A INICIO</a>
 				</div>
 	        </div>
 	    </div>

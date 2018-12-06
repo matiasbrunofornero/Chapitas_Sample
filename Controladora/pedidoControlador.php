@@ -17,10 +17,36 @@ class pedidoControlador
         require_once ROOT."Vistas/AltaPedido.php";
     }
 
-    public function ingresarPedido(){
+    public function ingresarPedido($tamano, $nombre, $telefono, $cliente, $petshop, $numero)
+    {
+        try
+        {
+            $existe = $this->pedidoDAO->buscar($pedido);
+            if(empty($existe))
+            {
+                $pedido = new Pedido($tamano, $nombre, $telefono, $cliente, $petshop, $numero);
+                $this->pedidoDAO->insertar($pedido);
+
+                $message = "El pedido fue cargado exitosamente";
+				echo "<script type='text/javascript'>alert('$message');</script>";
+				$this->altaPedido();	
+            }
+            else
+            {
+                $message = "El pedido ya fue cargado anteriormente";
+				echo "<script type='text/javascript'>alert('$message');</script>";
+				$this->altaPedido();
+            }
+        }
+        catch (PDOExcepction $e)
+        {
+            $message = $e->getMessage();
+            echo "<script type='text/javascript'>alert('$message');</script>";
+        }
     }
 
-    public function mostrarPedido(){
+    public function mostrarPedidos()
+    {
     }
 
     public function eliminarPedido(){
