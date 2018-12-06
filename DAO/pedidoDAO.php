@@ -51,8 +51,27 @@ class pedidoDAO extends Conexion implements IDAO{
         }
     }
 
-    public function eliminar($pedido){
-        
+    public function eliminar($numero)
+    {
+        try
+        {
+            $con = new Conexion();
+            $conexion = $con->conectar();
+            $resultado = null;
+    
+            $sql = "select * from pedidos where numero = :numero";
+    
+            $statement = $conexion->prepare($sql);
+            $statement->bindParam(':numero', $numero);
+            $statement->execute();
+        }
+        catch (PDOException $e)
+        {
+            $message = $e->getMessage();
+            echo "<script type='text/javascript'>alert('$message');</script>";
+        }
+
+        $con = null;
     }
 
     public function listar()

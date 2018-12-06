@@ -21,8 +21,9 @@ class pedidoControlador
     {
         try
         {
-            $existe = $this->pedidoDAO->buscar($pedido);
-            if(empty($existe))
+            echo "<script type='text/javascript'>alert('Buscando Pedido');</script>";
+            $existe = $this->pedidoDAO->buscar($numero);
+            if(!empty($existe))
             {
                 $pedido = new Pedido($tamano, $nombre, $telefono, $cliente, $petshop, $numero);
                 $this->pedidoDAO->insertar($pedido);
@@ -51,9 +52,29 @@ class pedidoControlador
         require_once ROOT."Vistas/ListaPedido.php";
     }
 
-    public function eliminarPedido(){
+    public function eliminarPedido()
+    {
+        require_once ROOT."Vistas/EliminarPedido.php";
     }
 
-    public function eliminar($numero){
+    public function eliminar($numero)
+    {
+        $existe = $this->pedidoDAO->buscar($numero);
+        if(!empty($existe))
+        {
+            $this->pedidoDAO->eliminar($numero);
+
+            $message = "El pedido ha sido eliminado correctamente";
+            echo "<script type='text/javascript'>alert('$message');</script>";
+
+            $this->eliminarPedido();	
+        }
+        else
+        {
+            $message = "El pedido buscado no existe";
+            echo "<script type='text/javascript'>alert('$message');</script>";
+            $this->altaPedido();
+        }
     }
 }
+?>

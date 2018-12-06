@@ -14,7 +14,7 @@
 					<br><br>
 
 					<input type="submit" value="BORRAR PEDIDO" 
-					style="width: 230px" onclick="location=''">
+					style="width: 230px" onclick="location='pedido/eliminarPedido'">
 					<br>
 
 	            </div>

@@ -4,7 +4,7 @@
 	    <div class="row">
 	        <div>
                 <h1> Alta Pedido </h1>
-                <form role= "form" method="POST" action="<?php 'pedido/ingresarPedido'?>">
+                <form role= "form" method="POST" action="<?php echo DIR.'pedido/ingresarPedido'?>">
 	                <div class= "row">
                         <div class= "form-group">
                             <label>Tamano</label>
