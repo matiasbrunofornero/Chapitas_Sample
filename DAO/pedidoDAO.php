@@ -55,8 +55,28 @@ class pedidoDAO extends Conexion implements IDAO{
         
     }
 
-    public function listar(){
-        
+    public function listar()
+    {
+        $fila = null;
+        try 
+        {
+            $con = new Conexion();
+            $conexion = $con->conectar();
+
+            $sql = "select * from pedidos order by Numero asc";
+
+            $statement = $conexion->prepare($sql);
+            $statement->execute();
+            $resultado = $statement->fetchAll();
+        }
+        catch (PDOException $e)
+        {
+            $message = $e->getMessage();
+            echo "<script type='text/javascript'>alert('$message');</script>";
+        }
+
+        $con = null;
+        return $resultado;
     }
 
     public function buscar($numero)
