@@ -48,8 +48,7 @@ class pedidoControlador
     public function mostrarPedidos()
     {
         $pedidos = $this->pedidoDAO->listar();
-        echo "<script type='text/javascript'>alert('Welcome to mostrarPedidos');</script>";
-
+        require_once ROOT."Vistas/ListaPedido.php";
     }
 
     public function eliminarPedido(){
