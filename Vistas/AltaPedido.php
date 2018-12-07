@@ -37,8 +37,14 @@
                     </div>
                     <div class= "row">
                         <div class= "form-group">
-                            <input type="submit" class="btn btn-success btn-block" style="color: white" value="Finalizar Carga">
-                            <input type="reset" class="btn btn-danger btn-block" style="color: white" value="Limpiar Campos">
+                            <label>Numero ID</label>
+                            <input type="text" name="numero" id="numero" required placeholder="Ingrese el numero identificatorio">
+                        </div>
+                    </div>
+                    <div class= "row">
+                        <div class= "form-group">
+                            <input type="submit" class="btn btn-success btn-block" style="color: black" value="Finalizar Carga">
+                            <input type="reset" class="btn btn-danger btn-block" style="color: black" value="Limpiar Campos">
                         </div>
                     </div>
                 </form>

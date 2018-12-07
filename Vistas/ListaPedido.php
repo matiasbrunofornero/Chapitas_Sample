@@ -31,6 +31,10 @@
                 <?php 
             }
         }
+        else
+        {
+            echo "<script type='text/javascript'>alert('EL ARREGLO PEDIDOS ESTA VACIO');</script>";
+        }
         ?>
         </tbody>
     </table>

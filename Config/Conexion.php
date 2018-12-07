@@ -1,7 +1,7 @@
 <?php namespace Config; require 'Parametros.php';
 	
-	class Conexion {
-	
+	class Conexion 
+	{
 		public function conectar() 
 		{
 			try
@@ -15,5 +15,3 @@
 			}
 		}
 	}
-
-

@@ -82,7 +82,7 @@ class pedidoDAO extends Conexion implements IDAO{
             $con = new Conexion();
             $conexion = $con->conectar();
 
-            $sql = "select * from pedidos order by Numero asc";
+            $sql = "select * from chapitas order by Numero asc";
 
             $statement = $conexion->prepare($sql);
             $statement->execute();
