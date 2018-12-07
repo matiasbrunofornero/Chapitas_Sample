@@ -21,22 +21,21 @@ class pedidoControlador
     {
         try
         {
-            echo "<script type='text/javascript'>alert('Buscando Pedido');</script>";
             $existe = $this->pedidoDAO->buscar($numero);
-            if(!empty($existe))
+            if(empty($existe))
             {
                 $pedido = new Pedido($tamano, $nombre, $telefono, $cliente, $petshop, $numero);
                 $this->pedidoDAO->insertar($pedido);
 
                 $message = "El pedido fue cargado exitosamente";
 				echo "<script type='text/javascript'>alert('$message');</script>";
-				$this->altaPedido();	
+				$this->mostrarPedidos();	
             }
             else
             {
-                $message = "El pedido ya fue cargado anteriormente";
+                $message = "El pedido ya fue cargado anteriormente. Reintentar";
 				echo "<script type='text/javascript'>alert('$message');</script>";
-				$this->altaPedido();
+                $this->altaPedido();
             }
         }
         catch (PDOExcepction $e)

@@ -31,11 +31,10 @@
                 <?php 
             }
         }
-        else
-        {
-            echo "<script type='text/javascript'>alert('EL ARREGLO PEDIDOS ESTA VACIO');</script>";
-        }
         ?>
         </tbody>
     </table>
+    <div style="margin-top: 10px">
+		<a href=" <?php echo DIR."pedido/altaPedido"; ?>">INGRESAR OTRO PEDIDO</a>
+	</div>
 </section>

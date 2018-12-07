@@ -34,14 +34,15 @@ class pedidoDAO extends Conexion implements IDAO{
 
             $con = new Conexion();
             $conexion = $con->conectar();
-            $sql = "insert into pedidos values(0, :tamano, :nombre, :telefono, :cliente, :petshop)";
+            $sql = "insert into chapitas values(:numero, :tamano, :nombre, :telefono, :cliente, :petshop)";
 
             $statement = $conexion->prepare($sql);
 			$statement->bindParam(":tamano", $tamano);
 			$statement->bindParam(":nombre", $nombre);
 			$statement->bindParam(":telefono", $telefono);
 			$statement->bindParam(":cliente", $cliente);
-			$statement->bindParam(":petshop", $petshop);
+            $statement->bindParam(":petshop", $petshop);
+            $statement->bindParam(":numero", $numero);
 			$statement->execute();
         }
         catch (PDOException $e)
