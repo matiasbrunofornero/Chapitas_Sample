@@ -67,7 +67,7 @@ class pedidoControlador
             $message = "El pedido ha sido eliminado correctamente";
             echo "<script type='text/javascript'>alert('$message');</script>";
 
-            $this->eliminarPedido();	
+            $this->mostrarPedidos();	
         }
         else
         {

@@ -8,7 +8,7 @@
 	                <div class= "row">
                         <div class= "form-group">
                             <label>Numero</label>
-                            <input type="text" maxlength="3" name="numero" id="numero" required placeholder="Ingrese el numero">
+                            <input type="text" maxlength="8" name="numero" id="numero" required placeholder="Ingrese el numero">
                         </div>
                     </div>
                     <div class= "row">
