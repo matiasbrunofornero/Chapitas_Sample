@@ -59,8 +59,8 @@ class pedidoDAO extends Conexion implements IDAO{
             $con = new Conexion();
             $conexion = $con->conectar();
             $resultado = null;
-    
-            $sql = "select * from pedidos where numero = :numero";
+
+            $sql = "delete from chapitas where numero = :numero";
     
             $statement = $conexion->prepare($sql);
             $statement->bindParam(':numero', $numero);
@@ -107,7 +107,7 @@ class pedidoDAO extends Conexion implements IDAO{
             $conexion = $con->conectar();
             $resultado = null;
 
-            $sql = "select * from pedidos where numero = :numero";
+            $sql = "select * from chapitas where numero = :numero";
 
             $statement = $conexion->prepare($sql);
             $statement->bindParam(':numero', $numero);

@@ -13,8 +13,8 @@
                     </div>
                     <div class= "row">
                         <div class= "form-group">
-                            <input type="submit" class="btn btn-success btn-block" style="color: white" value="Eliminar Pedido">
-                            <input type="reset" class="btn btn-danger btn-block" style="color: white" value="Limpiar Campos">
+                            <input type="submit" class="btn btn-success btn-block" style="color: black" value="Eliminar Pedido">
+                            <input type="reset" class="btn btn-danger btn-block" style="color: black" value="Limpiar Campos">
                         </div>
                     </div>
                 </form>

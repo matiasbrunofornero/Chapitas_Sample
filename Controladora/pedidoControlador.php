@@ -61,6 +61,7 @@ class pedidoControlador
         $existe = $this->pedidoDAO->buscar($numero);
         if(!empty($existe))
         {
+            echo "<script type='text/javascript'>alert('Intentando eliminar pedido $numero');</script>";
             $this->pedidoDAO->eliminar($numero);
 
             $message = "El pedido ha sido eliminado correctamente";
@@ -70,9 +71,9 @@ class pedidoControlador
         }
         else
         {
-            $message = "El pedido buscado no existe";
+            $message = "El pedido buscado no existe. Reintente";
             echo "<script type='text/javascript'>alert('$message');</script>";
-            $this->altaPedido();
+            $this->eliminarPedido();
         }
     }
 }
