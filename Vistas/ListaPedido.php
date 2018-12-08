@@ -35,6 +35,6 @@
         </tbody>
     </table>
     <div style="margin-top: 10px">
-		<a href=" <?php echo DIR."pedido/altaPedido"; ?>">INGRESAR OTRO PEDIDO</a>
+		<a href=" <?php echo DIR."pedido/altaPedido"; ?>">INGRESAR NUEVO PEDIDO</a>
 	</div>
 </section>

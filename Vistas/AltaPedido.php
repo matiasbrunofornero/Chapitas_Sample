@@ -60,7 +60,7 @@
                     </div>
                 </form>
 				<div style="margin-top: 10px">
-					<a href=" <?php echo DIR .'Inicio' ?>">VOLVER A INICIO</a>
+					<a href=" <?php echo DIR .'Inicio/indexInicio' ?>">VOLVER AL MENU</a>
 				</div>
 	        </div>
 	    </div>
