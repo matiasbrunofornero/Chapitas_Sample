@@ -8,7 +8,11 @@
 	                <div class= "row">
                         <div class= "form-group">
                             <label>Tamano</label>
-                            <input type="text" name="tamano" id="tamano" required placeholder="Ingrese el tamano">
+                            <select name="tamano" id="tamano" required placeholder="Ingrese el tamano">
+                                <option>Gatito</option>
+                                <option>Chico</option>
+                                <option>Grande</option>
+                            </select>
                         </div>
                     </div>
                     <div class= "row">
@@ -32,7 +36,14 @@
                     <div class= "row">
                         <div class= "form-group">
                             <label>Petshop</label>
-                            <input type="text" name="petshop" id="petshop" required placeholder="Ingrese el petshop encargado">
+                            <select name="petshop" id="petshop" required placeholder="Ingrese Petshop">
+                                <option>Libertad</option>
+                                <option>Libra</option>
+                                <option>Mariela</option>
+                                <option>Paso</option>
+                                <option>Pauli</option>
+                                <option>Wilson</option>
+                            </select>
                         </div>
                     </div>
                     <div class= "row">
