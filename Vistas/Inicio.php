@@ -6,15 +6,15 @@
 	            <div id="inicio">
 
 	                <input type="submit" value="CARGAR PEDIDO" 
-					style="width: 230px" onclick="location='pedido/altaPedido'">
+					style="width: 230px" onclick="location='/chapitasphp/pedido/altaPedido'">
 					<br><br>
 
 					<input type="submit" value="LISTAR PEDIDOS" 
-					style="width: 230px" onclick="location='pedido/mostrarPedidos'">
+					style="width: 230px" onclick="location='/chapitasphp/pedido/mostrarPedidos'">
 					<br><br>
 
 					<input type="submit" value="BORRAR PEDIDO" 
-					style="width: 230px" onclick="location='pedido/eliminarPedido'">
+					style="width: 230px" onclick="location='/chapitasphp/pedido/eliminarPedido'">
 					<br>
 
 	            </div>
