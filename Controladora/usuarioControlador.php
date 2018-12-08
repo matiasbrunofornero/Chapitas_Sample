@@ -21,14 +21,14 @@ class usuarioControlador
                 $message = "Login exitoso. Bienvenido a ChapitasPHP";
                 echo "<script type='text/javascript'>alert('$message');</script>";
                 
-                require_once 'Vistas/InicioIndex.php';
+                require_once 'Vistas/Inicio.php';
             }
             else
             {
                 $message = "Datos incorrectos. Intente nuevamente";
                 echo "<script type='text/javascript'>alert('$message');</script>";
 
-                require_once 'Vistas/Inicio.php';
+                require_once 'Vistas/InicioIndex.php';
             }
         }
         catch(\Exception $e)

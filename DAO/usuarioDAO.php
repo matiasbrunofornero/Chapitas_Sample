@@ -31,8 +31,8 @@ class usuarioDAO extends Conexion
 
             $statement = $conexion->prepare($sql);
 
-            $statement->bindParam(':Email', $Email);
-            $statement->bindParam(':Password', $Password);
+            $statement->bindParam(':email', $email);
+            $statement->bindParam(':password', $password);
             $statement->execute();
 			$row = $statement->fetch();
 
