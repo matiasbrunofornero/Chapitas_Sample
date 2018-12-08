@@ -1,11 +1,16 @@
 <?php namespace Controladora;
 
-class InicioControlador {
-
+class InicioControlador 
+{
         public function index() 
+        {
+                include_once ROOT.'Vistas/InicioIndex.php';
+        }
+
+        public function indexInicio() 
         {
                 include_once ROOT.'Vistas/Inicio.php';
         }
-
 }
+
 ?>
