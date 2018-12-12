@@ -24,4 +24,4 @@ CREATE TABLE dbchapitas.chapitas
 INSERT INTO dbchapitas.usuarios
 	(Email, Password)
 VALUES
-	('chapitas@admin.com', '123456')
+	('admin@admin.com', '123456')

@@ -59,6 +59,9 @@
                         </div>
                     </div>
                 </form>
+                <div style="margin-top: 10px">
+		            <a href=" <?php echo DIR."petshop/altaPetshop"; ?>">INGRESAR NUEVO PETSHOP</a>
+	            </div>
 				<div style="margin-top: 10px">
 					<a href=" <?php echo DIR .'Inicio/indexInicio' ?>">VOLVER AL MENU</a>
 				</div>
