@@ -23,7 +23,7 @@ class petshopDAO extends Conexion implements IDAO
     {
         try
         {
-            $numero = $petshop->getNumero();
+            $numero = $petshop->getId();
             $nombre = $petshop->getNombre();
             $direccion = $petshop->getDireccion();
         

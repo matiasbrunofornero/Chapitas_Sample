@@ -6,6 +6,13 @@ class Petshop
     private $nombre;
     private $direccion;
 
+    public function __construct($petshopId='', $nombre='', $direccion='')
+    {
+        $this->setId($petshopId);
+        $this->setNombre($nombre);
+        $this->setDireccion($direccion);
+    }
+
     #region Getters
     public function getId()
     {
