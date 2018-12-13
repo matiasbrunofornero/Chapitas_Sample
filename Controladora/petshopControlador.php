@@ -29,7 +29,7 @@ class petshopControlador
 
                 $message = "El petshop fue cargado exitosamente";
 				echo "<script type='text/javascript'>alert('$message');</script>";
-                require_once ROOT."Vistas/AltaPedido.php";
+                require_once ROOT."Vistas/Inicio.php";
             }
         }
         catch (PDOExcepction $e)
@@ -44,18 +44,17 @@ class petshopControlador
         require_once ROOT."Vistas/EliminarPetshop.php";
     }
 
-    public function eliminar($numero)
+    public function eliminar($nombre)
     {
-        $existe = $this->petshopDAO->buscar($numero);
+        $existe = $this->petshopDAO->buscar($nombre);
         if(!empty($existe))
         {
-            echo "<script type='text/javascript'>alert('Intentando eliminar petshop $numero');</script>";
-            $this->petshopDAO->eliminar($numero);
+            $this->petshopDAO->eliminar($nombre);
 
             $message = "El petshop ha sido eliminado correctamente";
             echo "<script type='text/javascript'>alert('$message');</script>";
 
-            require_once ROOT."Vistas/AltaPedido.php";
+            require_once ROOT."Vistas/Inicio.php";
         }
         else
         {

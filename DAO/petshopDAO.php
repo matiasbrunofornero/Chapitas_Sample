@@ -45,7 +45,28 @@ class petshopDAO extends Conexion implements IDAO
         }
     }
 
-    public function eliminar($petshop){}
+    public function eliminar($nombre)
+    {
+        try
+        {
+            $con = new Conexion();
+            $conexion = $con->conectar();
+            $resultado = null;
+
+            $sql = "delete from petshops where nombre = :nombre";
+    
+            $statement = $conexion->prepare($sql);
+            $statement->bindParam(':nombre', $nombre);
+            $statement->execute();
+        }
+        catch (PDOException $e)
+        {
+            $message = $e->getMessage();
+            echo "<script type='text/javascript'>alert('$message');</script>";
+        }
+
+        $con = null;
+    }
 
     public function listar()
     {
@@ -71,5 +92,29 @@ class petshopDAO extends Conexion implements IDAO
         return $resultado;
     }
 
-    public function buscar($petshop){}
+    public function buscar($nombre)
+    {
+        try
+        {
+            $con = new Conexion();
+            $conexion = $con->conectar();
+            $resultado = null;
+
+            $sql = "select * from petshops where nombre = :nombre";
+
+            $statement = $conexion->prepare($sql);
+            $statement->bindParam(':nombre', $nombre);
+            $statement->execute();
+
+            $resultado = $statement->fetchAll();
+        }
+        catch (PDOException $e)
+        {
+            $message = $e->getMessage();
+            echo "<script type='text/javascript'>alert('$message');</script>";
+        }
+
+        $con = null;
+        return $resultado;
+    }
 }
