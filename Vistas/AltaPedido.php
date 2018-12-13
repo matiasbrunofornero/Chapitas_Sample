@@ -36,27 +36,19 @@
                     <div class= "row">
                         <div class= "form-group">
                             <label>Petshop</label>
-                            <select name="petshop" id="petshop" required placeholder="Ingrese Petshop">
-                                <option>Libertad</option>
-                                <option>Libra</option>
-                                <option>Mariela</option>
-                                <option>Paso</option>
-                                <option>Pauli</option>
-                                <option>Wilson</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class= "row">
-                        <div class= "form-group">
-                            <label>Petshop</label>
-                            <select name="petshop" id="petshop" required placeholder="Ingrese Petshop">
-                                <option>Libertad</option>
-                                <option>Libra</option>
-                                <option>Mariela</option>
-                                <option>Paso</option>
-                                <option>Pauli</option>
-                                <option>Wilson</option>
-                            </select>
+                            <?php
+                                if(!empty($petshops))
+                                {
+                                    ?><select name="petshop" id="petshop" required><?php
+                                    foreach($petshops as $i)
+                                    {
+                                        ?>
+                                            <option><?php echo $i['Nombre'];?></option>
+                                        <?php 
+                                    }
+                                    ?></select><?php
+                                }
+                            ?>
                         </div>
                     </div>
                     <div class= "row">

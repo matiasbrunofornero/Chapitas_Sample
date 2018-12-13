@@ -52,7 +52,6 @@ class petshopDAO extends Conexion implements IDAO
         $fila = null;
         try 
         {
-            echo "<script type='text/javascript'>alert('TRY DENTRO DE LISTARPETSHOPS');</script>";
             $con = new Conexion();
             $conexion = $con->conectar();
 

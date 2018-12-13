@@ -39,12 +39,6 @@ class petshopControlador
         }
     }
 
-    public function mostrarPetshops()
-    {
-        $petshops = $this->petshopDAO->listar();
-        require_once ROOT."Vistas/AltaPedido.php";
-    }
-
     public function eliminarPetshop()
     {
         require_once ROOT."Vistas/EliminarPetshop.php";

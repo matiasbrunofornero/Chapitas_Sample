@@ -1,19 +1,23 @@
 <?php namespace Controladora;
 
 use DAO\pedidoDAO as PedidoDAO;
+use DAO\petshopDAO as PetshopDAO;
 use Modelo\Pedido as Pedido;
 
 class pedidoControlador
 {
     private $pedidoDAO;
+    private $petshopDAO;
 
     public function __construct()
 	{
         $this->pedidoDAO = PedidoDAO::getInstance();
+        $this->petshopDAO = PetshopDAO::getInstance();
     }
     
     public function altaPedido()
     {
+        $petshops = $this->petshopDAO->listar();
         require_once ROOT."Vistas/AltaPedido.php";
     }
 
