@@ -3,7 +3,7 @@
 	<div class="container" style="padding: 150px">
 	    <div class="row">
 	        <div>
-                <h1> Alta Pedido </h1>
+                <h1> Nuevo Petshop </h1>
                 <form role= "form" method="POST" action="<?php echo DIR.'petshop/ingresarPetshop'?>">
 	                <div class= "row">
                         <div class= "form-group">

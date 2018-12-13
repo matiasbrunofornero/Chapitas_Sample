@@ -48,6 +48,19 @@
                     </div>
                     <div class= "row">
                         <div class= "form-group">
+                            <label>Petshop</label>
+                            <select name="petshop" id="petshop" required placeholder="Ingrese Petshop">
+                                <option>Libertad</option>
+                                <option>Libra</option>
+                                <option>Mariela</option>
+                                <option>Paso</option>
+                                <option>Pauli</option>
+                                <option>Wilson</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class= "row">
+                        <div class= "form-group">
                             <label>Numero ID</label>
                             <input type="text" name="numero" id="numero" required placeholder="Ingrese el numero identificatorio">
                         </div>
