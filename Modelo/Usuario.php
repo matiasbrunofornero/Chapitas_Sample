@@ -1,10 +1,17 @@
-<?php namespace Modelos;
+<?php namespace Modelo;
 
 class Usuario
 {
     private $usuarioId;
     private $email;
     private $password;
+
+    public function __construct($usuarioId='', $email='', $password='')
+    {
+        $this->setId($usuarioId);
+        $this->setEmail($email);
+        $this->setPassword($password);
+    }
 
     #region Getters
     public function getId()

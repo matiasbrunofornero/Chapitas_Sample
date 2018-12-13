@@ -32,7 +32,7 @@ class petshopControlador
                 require_once ROOT."Vistas/Inicio.php";
             }
         }
-        catch (PDOExcepction $e)
+        catch (PDOException $e)
         {
             $message = $e->getMessage();
             echo "<script type='text/javascript'>alert('$message');</script>";

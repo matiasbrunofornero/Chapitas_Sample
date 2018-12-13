@@ -45,30 +45,52 @@ class usuarioControlador
         }
     }
 
-    public function ingresarUsuario($id, $email, $contrasena)
+    public function ingresarUsuario($id, $email, $password)
     {
         try
         {
             $existe = $this->usuarioDAO->buscar($email, $password);
             if(empty($existe))
             {
-                $usuario = new Usuario($id, $email, $contrasena);
+                $usuario = new Usuario($id, $email, $password);
+
                 $this->usuarioDAO->insertar($usuario);
 
                 $message = "El usuario fue cargado exitosamente";
 				echo "<script type='text/javascript'>alert('$message');</script>";
-                // require_once ROOT."Vistas/Inicio.php";
+                require_once ROOT."Vistas/Inicio.php";
             }
         }
-        catch (PDOExcepction $e)
+        catch (PDOException $e)
         {
             $message = $e->getMessage();
             echo "<script type='text/javascript'>alert('$message');</script>";
         }
     }
 
-    public function eliminarUsuario($email, $password)
+    public function eliminarUsuario()
     {
+        require_once ROOT."Vistas/EliminarUsuario.php";
+    }
+
+    public function eliminar($email, $password)
+    {
+        $existe = $this->usuarioDAO->buscar($email, $password);
+        if(!empty($existe))
+        {
+            $this->usuarioDAO->eliminar($email);
+
+            $message = "El usuario ha sido eliminado correctamente";
+            echo "<script type='text/javascript'>alert('$message');</script>";
+
+            require_once ROOT."Vistas/Inicio.php";
+        }
+        else
+        {
+            $message = "El usuario buscado no existe. Reintente";
+            echo "<script type='text/javascript'>alert('$message');</script>";
+            $this->eliminarUsuario(); 
+        }
     }
 }
 

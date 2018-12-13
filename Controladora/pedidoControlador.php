@@ -42,7 +42,7 @@ class pedidoControlador
                 $this->altaPedido();
             }
         }
-        catch (PDOExcepction $e)
+        catch (PDOException $e)
         {
             $message = $e->getMessage();
             echo "<script type='text/javascript'>alert('$message');</script>";

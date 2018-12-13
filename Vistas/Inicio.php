@@ -15,10 +15,14 @@
 
 					<input type="submit" value="BORRAR PEDIDO" 
 					style="width: 230px" onclick="location='/chapitasphp/pedido/eliminarPedido'">
-					<br><br>
+					<br><br><br>
 
 					<input type="submit" value="CARGAR USUARIO" 
-					style="width: 230px" onclick="location='/chapitasphp/usuario/AltaUsuario'">
+					style="width: 230px" onclick="location='/chapitasphp/usuario/altaUsuario'">
+					<br><br>
+					
+					<input type="submit" value="ELIMINAR USUARIO" 
+					style="width: 230px" onclick="location='/chapitasphp/usuario/eliminarUsuario'">
 					<br>
 
 	            </div>
