@@ -19,6 +19,32 @@ class usuarioDAO extends Conexion
         return self::$instance;
     }
 
+    public function insertar($usuario)
+    {
+        try
+        {
+            $id = $usuario->getId();
+            $email = $usuario->getEmail();
+            $password = $usuario->getPassword();
+        
+            $con = new Conexion();
+            $conexion = $con->conectar();
+            $sql = "insert into usuarios values(:id, :email, :password)";
+        
+            $statement = $conexion->prepare($sql);
+			$statement->bindParam(":id", $id);
+			$statement->bindParam(":email", $email);
+			$statement->bindParam(":password", $password);
+
+			$statement->execute();
+        }
+        catch (PDOException $e)
+        {
+            $message = $e->getMessage();
+            echo "<script type='text/javascript'>alert('$message');</script>";
+        }
+    }
+
     public function buscar($email, $password)
     {
         $row = null;
