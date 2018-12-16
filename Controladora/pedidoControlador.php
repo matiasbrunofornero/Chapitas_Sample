@@ -21,14 +21,16 @@ class pedidoControlador
         require_once ROOT."Vistas/AltaPedido.php";
     }
 
-    public function ingresarPedido($tamano, $nombre, $telefono, $cliente, $petshop, $numero)
+    public function ingresarPedido($tamano, $nombre, $telefono, $cliente, $petshop)
     {
         try
         {
-            $existe = $this->pedidoDAO->buscar($numero);
+            $existe = $this->pedidoDAO->buscar($nombre);
+
             if(empty($existe))
             {
-                $pedido = new Pedido($tamano, $nombre, $telefono, $cliente, $petshop, $numero);
+                $pedido = new Pedido($tamano, $nombre, $telefono, $cliente, $petshop);
+
                 $this->pedidoDAO->insertar($pedido);
 
                 $message = "El pedido fue cargado exitosamente";
@@ -42,7 +44,7 @@ class pedidoControlador
                 $this->altaPedido();
             }
         }
-        catch (PDOException $e)
+        catch (PDOExcepction $e)
         {
             $message = $e->getMessage();
             echo "<script type='text/javascript'>alert('$message');</script>";
