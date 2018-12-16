@@ -11,6 +11,8 @@
                 <th width="50px">Telefono</th>
                 <th width="50px">Cliente</th>
                 <th width="50px">Petshop</th>
+                <th width="50px">Direccion</th>
+
             </tr>
         </thead>
         <tbody>
@@ -27,6 +29,7 @@
                     <td><?php echo $i['Telefono'];?></td>
                     <td><?php echo $i['Cliente'];?></td>
                     <td><?php echo $i['Petshop'];?></td>
+                    <td><?php echo $i['Direccion'];?></td>
                 </tr>
                 <?php 
             }
