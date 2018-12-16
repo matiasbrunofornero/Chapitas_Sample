@@ -5,12 +5,12 @@
 	        <div>
                 <h1> Nuevo Petshop </h1>
                 <form role= "form" method="POST" action="<?php echo DIR.'petshop/ingresarPetshop'?>">
-	                <div class= "row">
+	                <!-- <div class= "row">
                         <div class= "form-group">
                             <label>ID</label>
                             <input type="text" name="id" id="id" required placeholder="Ingrese el ID del Petshop">
                         </div>
-                    </div>
+                    </div> -->
                     <div class= "row">
                         <div class= "form-group">
                             <label>Nombre</label>

@@ -2,23 +2,17 @@
 
 class Petshop
 {
-    private $petshopId;
     private $nombre;
     private $direccion;
 
-    public function __construct($petshopId='', $nombre='', $direccion='')
+    public function __construct($nombre='', $direccion='', $numero='')
     {
-        $this->setId($petshopId);
         $this->setNombre($nombre);
         $this->setDireccion($direccion);
+        $this->setNumero($numero);
     }
 
     #region Getters
-    public function getId()
-    {
-        return $this->petshopId;
-    }
-    
     public function getNombre()
     {
         return $this->nombre;
@@ -28,14 +22,14 @@ class Petshop
     {
         return $this->direccion;
     }
+
+    public function getNumero()
+    {
+        return $this->numero;
+    }
     #endregion
     
     #region Setters
-    public function setId($petshopId)
-    {
-        $this->petshopId = $petshopId;
-    }
-    
     public function setNombre($nombre)
     {
         $this->nombre = $nombre;
@@ -44,5 +38,10 @@ class Petshop
     public function setDireccion($direccion)
     {
         $this->direccion = $direccion;
+    }
+
+    public function setNumero($numero)
+    {
+        $this->numero = $numero;
     }
 }

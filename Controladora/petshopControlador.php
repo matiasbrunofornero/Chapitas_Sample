@@ -17,14 +17,14 @@ class petshopControlador
         require_once ROOT."Vistas/AltaPetshop.php";
     }
 
-    public function ingresarPetshop($numero, $nombre, $direccion)
+    public function ingresarPetshop($nombre, $direccion)
     {
         try
         {
-            $existe = $this->petshopDAO->buscar($numero);
+            $existe = $this->petshopDAO->buscar($nombre);
             if(empty($existe))
             {
-                $petshop = new Petshop($numero, $nombre, $direccion);
+                $petshop = new Petshop($nombre, $direccion);
                 $this->petshopDAO->insertar($petshop);
 
                 $message = "El petshop fue cargado exitosamente";

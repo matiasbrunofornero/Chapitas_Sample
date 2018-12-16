@@ -23,16 +23,14 @@ class petshopDAO extends Conexion implements IDAO
     {
         try
         {
-            $numero = $petshop->getId();
             $nombre = $petshop->getNombre();
             $direccion = $petshop->getDireccion();
         
             $con = new Conexion();
             $conexion = $con->conectar();
-            $sql = "insert into petshops values(:numero, :nombre, :direccion)";
+            $sql = "insert into petshops values(NULL, :nombre, :direccion)";
         
             $statement = $conexion->prepare($sql);
-			$statement->bindParam(":numero", $numero);
 			$statement->bindParam(":nombre", $nombre);
 			$statement->bindParam(":direccion", $direccion);
 
