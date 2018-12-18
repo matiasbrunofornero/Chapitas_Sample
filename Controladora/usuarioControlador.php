@@ -45,14 +45,14 @@ class usuarioControlador
         }
     }
 
-    public function ingresarUsuario($id, $email, $password)
+    public function ingresarUsuario($email, $password)
     {
         try
         {
             $existe = $this->usuarioDAO->buscar($email, $password);
             if(empty($existe))
             {
-                $usuario = new Usuario($id, $email, $password);
+                $usuario = new Usuario($email, $password);
 
                 $this->usuarioDAO->insertar($usuario);
 

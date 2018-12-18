@@ -5,12 +5,12 @@
 	        <div>
                 <h1> Nuevo Usuario </h1>
                 <form role= "form" method="POST" action="<?php echo DIR.'usuario/ingresarUsuario'?>">
-	                <div class= "row">
+	                <!-- <div class= "row">
                         <div class= "form-group">
                             <label>ID</label>
                             <input type="text" name="id" id="id" required placeholder="Ingrese el ID del Usuario">
                         </div>
-                    </div>
+                    </div> -->
                     <div class= "row">
                         <div class= "form-group">
                             <label>Email</label>

@@ -23,17 +23,15 @@ class usuarioDAO extends Conexion
     {
         try
         {
-            $id = $usuario->getId();
             $email = $usuario->getEmail();
             $password = $usuario->getPassword();
 
             $con = new Conexion();
             $conexion = $con->conectar();
 
-            $sql = "insert into usuarios values(:id, :email, :password)";
+            $sql = "insert into usuarios values(NULL, :email, :password)";
 
             $statement = $conexion->prepare($sql);
-			$statement->bindParam(":id", $id);
 			$statement->bindParam(":email", $email);
 			$statement->bindParam(":password", $password);
 

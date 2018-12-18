@@ -2,23 +2,18 @@
 
 class Usuario
 {
-    private $usuarioId;
+    // private $usuarioId;
     private $email;
     private $password;
 
-    public function __construct($usuarioId='', $email='', $password='')
+    public function __construct($email='', $password='', $usuarioId='')
     {
-        $this->setId($usuarioId);
         $this->setEmail($email);
         $this->setPassword($password);
+        $this->setId($usuarioId);
     }
 
     #region Getters
-    public function getId()
-    {
-        return $this->usuarioId;
-    }
-    
     public function getEmail()
     {
         return $this->email;
@@ -28,14 +23,14 @@ class Usuario
     {
         return $this->password;
     }
+
+    public function getId()
+    {
+        return $this->usuarioId;
+    }
     #endregion
     
     #region Setters
-    public function setId($id)
-    {
-        $this->id = $id;
-    }
-    
     public function setEmail($email)
     {
         $this->email = $email;
@@ -44,5 +39,10 @@ class Usuario
     public function setPassword($password)
     {
         $this->password = $password;
+    }
+
+    public function setId($id)
+    {
+        $this->id = $id;
     }
 }
