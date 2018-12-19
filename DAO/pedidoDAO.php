@@ -78,30 +78,13 @@ class pedidoDAO extends Conexion implements IDAO{
             $con = new Conexion();
             $conexion = $con->conectar();
 
-            // $sql = "SELECT * FROM chapitas ORDER BY Numero ASC";
-
-            // $sql = "SELECT chapitas.Numero, chapitas.Tamano, 
-            // chapitas.Nombre, chapitas.Telefono, chapitas.Cliente, 
-            // chapitas.Petshop, petshop.Direccion             
-            // FROM chapitas as ch
-            // -- INNER JOIN petshop as pet
-            // -- on ch.Petshop = pet.Numero
-            // ORDER BY Numero DESC";
-
             $sql = "SELECT ch.Numero, ch.Tamano, 
-            ch.Nombre, ch.Telefono, 
+            ch.Mascota, ch.Telefono, 
             ch.Cliente, pet.Nombre, pet.Direccion             
             FROM chapitas as ch
             INNER JOIN petshops as pet
             on ch.Petshop = pet.Numero
             ORDER BY Numero ASC";
-
-            // $sql = "SELECT ch.Numero, ch.Tamano, 
-            // ch.Nombre, ch.Telefono, 
-            // ch.Cliente, ch.Petshop, pet.Direccion             
-            // FROM chapitas as ch, petshops as pet 
-            // WHERE pet.Numero = ch.Petshop;
-            // ORDER BY Numero DESC";
 
             $statement = $conexion->prepare($sql);
             $statement->execute();

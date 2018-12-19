@@ -7,7 +7,7 @@
             <tr>
                 <th width="50px">Numero</th>
                 <th width="50px">Tamano</th>
-                <th width="50px">Nombre</th>
+                <th width="50px">Mascota</th>
                 <th width="50px">Telefono</th>
                 <th width="50px">Cliente</th>
                 <th width="50px">Petshop</th>
@@ -25,7 +25,7 @@
                 <tr>
                     <td><?php echo $i['Numero'];?></td>
                     <td><?php echo $i['Tamano'];?></td>
-                    <td><?php echo $i['Nombre'];?></td>
+                    <td><?php echo $i['Mascota'];?></td>
                     <td><?php echo $i['Telefono'];?></td>
                     <td><?php echo $i['Cliente'];?></td>
                     <td><?php echo $i['Nombre'];?></td>
