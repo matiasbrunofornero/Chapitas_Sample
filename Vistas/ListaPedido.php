@@ -29,7 +29,6 @@
                     <td><?php echo $i['Telefono'];?></td>
                     <td><?php echo $i['Cliente'];?></td>
                     <td><?php echo $i['Petshop'];?></td>
-                    <td><?php echo $i['Direccion'];?></td>
                 </tr>
                 <?php 
             }

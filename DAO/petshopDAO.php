@@ -74,7 +74,7 @@ class petshopDAO extends Conexion implements IDAO
             $con = new Conexion();
             $conexion = $con->conectar();
 
-            $sql = "select Nombre from petshops order by Nombre asc";
+            $sql = "SELECT * FROM petshops ORDER BY Nombre ASC";
 
             $statement = $conexion->prepare($sql);
             $statement->execute();

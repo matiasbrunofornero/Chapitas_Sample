@@ -43,7 +43,7 @@
                                     foreach($petshops as $i)
                                     {
                                         ?>
-                                            <option><?php echo $i['Nombre'];?></option>
+                                            <option value="<?php echo $i['Numero'];?>"><?php echo $i['Nombre']?></option>;
                                         <?php 
                                     }
                                     ?></select><?php
